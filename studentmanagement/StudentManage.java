@@ -6,19 +6,19 @@ import java.util.Arrays;
 public class StudentManage{
     public static ArrayList<Student> students = new ArrayList<Student>();
 
-    // Declaring ANSI_RESET 
-    public static final String ANSI_RESET = "\u001B[0m";
+    // Declaring RESET
+    public static final String RESET = "\u001B[0m";
 
     // Declaring CLI colors
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_YELLOW_BG = "\u001B[43m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String YELLOW_BG = "\u001B[43m";
     
     // rank
     public static void rankStudents() {
         int rankCounter = 0;
 
         String[] rankings = new String[students.size()];
-        System.out.println(ANSI_YELLOW + "====== Student Rankings ======" + ANSI_RESET + "\n");
+        System.out.println(YELLOW + "====== Student Rankings ======" + RESET + "\n");
         
         for(int i = 0; i < students.size(); i++) {
             String rankData = "Average: " + Double.toString(students.get(i).getAStudentAverage()) + " - Name: " + students.get(i).getStudentName();
@@ -29,7 +29,7 @@ public class StudentManage{
         
         for(int i = rankings.length - 1; i >= 0 ; i--) {
             rankCounter++;
-            System.out.println(ANSI_YELLOW + rankings[i] + " - " + " Rank: " + ANSI_RESET + ANSI_YELLOW_BG + " " + rankCounter + " " + ANSI_RESET);
+            System.out.println(YELLOW + rankings[i] + " - " + " Rank: " + RESET + YELLOW_BG + " " + rankCounter + " " + RESET);
         }
 
         System.out.println();
@@ -37,7 +37,7 @@ public class StudentManage{
 
     // data formatter
     private static String dataFormatter(int i) {
-        String resultFormat = ANSI_YELLOW + "[ Name: " + ANSI_RESET + ANSI_YELLOW_BG + " " + students.get(i).getStudentName() + " " + ANSI_RESET + ANSI_YELLOW +", ID: " + ANSI_RESET + ANSI_YELLOW_BG + " " + students.get(i).getStudentID() + " " + ANSI_RESET + ANSI_YELLOW + ", Mathematics: " + ANSI_RESET + ANSI_YELLOW_BG + " " + students.get(i).getSubjectMark(0) + " " + ANSI_RESET + ANSI_YELLOW + ", Science: " + ANSI_RESET + ANSI_YELLOW_BG + " " + students.get(i).getSubjectMark(1) + " " + ANSI_RESET + ANSI_YELLOW + ", Total Marks: " + ANSI_YELLOW_BG + " " + Integer.toString(students.get(i).getAStudentTotal()) + " " + ANSI_RESET + ANSI_YELLOW +", Average: " + ANSI_RESET + ANSI_YELLOW_BG + " " + Double.toString(students.get(i).getAStudentAverage()) + " " + ANSI_RESET + ANSI_YELLOW + " ]" + ANSI_RESET;
+        String resultFormat = YELLOW + "[ Name: " + RESET + YELLOW_BG + " " + students.get(i).getStudentName() + " " + RESET + YELLOW +", ID: " + RESET + YELLOW_BG + " " + students.get(i).getStudentID() + " " + RESET + YELLOW + ", Mathematics: " + RESET + YELLOW_BG + " " + students.get(i).getSubjectMark(0) + " " + RESET + YELLOW + ", Science: " + RESET + YELLOW_BG + " " + students.get(i).getSubjectMark(1) + " " + RESET + YELLOW + ", Total Marks: " + YELLOW_BG + " " + Integer.toString(students.get(i).getAStudentTotal()) + " " + RESET + YELLOW +", Average: " + RESET + YELLOW_BG + " " + Double.toString(students.get(i).getAStudentAverage()) + " " + RESET + YELLOW + " ]" + RESET;
 
         return resultFormat;
     }
