@@ -12,7 +12,7 @@ public class Admin{
     public static final String Green = "\u001B[32m";
     public static final String Yellow = "\u001B[33m";
     public static final String Blue = "\u001B[34m";
-    public static final String ANSI_RED_BG = "\u001B[41m";
+    public static final String RED_BG = "\u001B[41m";
     public static final String Green_BG = "\u001B[42m";
     public static final String Blue_BG = "\u001B[44m";
     public static final String Yellow_BG = "\u001B[43m";
@@ -103,7 +103,7 @@ public class Admin{
             }
         } catch (Exception e) {
             System.out.println();
-            System.out.println(ANSI_RED_BG + e + Reset);
+            System.out.println(RED_BG + e + Reset);
             System.out.println();
             System.exit(0);
         }
@@ -142,7 +142,7 @@ public class Admin{
             System.out.println();
         } else {
             System.out.println();
-            System.out.println(ANSI_RED_BG + "Error! Can't Update Name. Check Student ID Again." + Reset);
+            System.out.println(RED_BG + "Error! Can't Update Name. Check Student ID Again." + Reset);
             System.out.println();
         }
     }
@@ -179,7 +179,7 @@ public class Admin{
             System.out.println();
         } else {
             System.out.println();
-            System.out.println(ANSI_RED_BG + "Error! Can't Update Mark" + Reset);
+            System.out.println(RED_BG + "Error! Can't Update Mark" + Reset);
             System.out.println();
         }
     }
@@ -195,7 +195,7 @@ public class Admin{
             System.out.println();
         } else {
             System.out.println();
-            System.out.println(ANSI_RED_BG + "Error! Can't Delete. Check Student ID." + Reset);
+            System.out.println(RED_BG + "Error! Can't Delete. Check Student ID." + Reset);
             System.out.println();
         }
     }
